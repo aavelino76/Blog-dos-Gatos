@@ -1,0 +1,346 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+  --colorBGdark:#065E7C;
+  --colorBGlight: #387E96;
+  --colortextdark: #202024;
+  --colortextlight: #ffffff;
+  --colortextdark: #202024;
+
+}
+
+header{
+  background-color: var(--colorBGdark);
+  
+  padding: 1.2rem 2.8rem;
+}
+
+header .head{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 37.4rem;
+  gap: 2.6rem;
+  margin-inline: auto;
+}
+
+header img:first-child{
+  width: 4rem;
+  height: 4rem;
+ 
+}
+
+input{
+  background-color: var(--colorBGlight);
+  color: var(--colortextlight);
+  border: 0;
+  border-radius: 0.4rem;
+  padding: 1.2rem 1.4rem;
+  
+  font-weight: 600;
+  line-height: 100%;
+
+}
+
+input::placeholder{
+  color: var(--colortextlight);
+}
+
+
+
+.avatar{
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/*Main settings*/
+
+main{
+  margin-inline: auto;
+  max-width: 38.2rem;
+
+}
+
+main .box{
+  padding-inline: 2.2rem;
+}
+
+main img:first-child{
+  width:100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  
+}
+
+main h1{
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 160%;
+  color: var(--colortextdark);
+  margin-top: 3rem;
+
+}
+
+
+button{
+  all: unset;
+}
+
+.thumbs{
+  border:0;
+  gap: 1.2rem;
+  padding: 0;
+  transition: all;
+   
+  
+}
+
+.thumbs:hover{
+  transform: scale(1.1) rotate(-5deg);
+}
+
+main p{
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 160%;
+  color: var(--colortextdark);
+  margin-top: 3rem;
+
+}
+
+
+/*Aside*/
+aside{
+  margin-inline: auto;
+  max-width: 38.2rem;
+  padding: 2.2rem;
+ 
+  
+}
+
+aside h2{
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 160%;
+}
+
+
+
+aside .container{
+  display: grid;
+  grid-template-columns: 15.1rem 1fr;
+  gap: 1.6rem;
+  margin-top: 3.2rem;
+  align-items: center;
+ 
+}
+
+aside .content h3{
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--colortextdark);
+
+}
+
+aside .content p{
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 130%;
+  margin-top: 1rem;
+
+}
+
+/*Footer*/
+
+footer{
+  background-color: var(--colorBGdark);
+  margin-inline: auto;
+  color: var(--colortextlight);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 2.6rem 1.6rem;
+  margin-top: 3.9rem;
+}
+
+.container img{
+  animation: appear .4s;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+header{
+  animation: magichead 600ms;
+  animation-delay: 400ms;
+  animation-fill-mode: backwards;
+  }
+
+  footer{
+    animation: magicfoot 600ms;
+    animation-delay: 400ms;
+    animation-fill-mode: backwards;
+  }
+
+@keyframes magichead {
+  from{
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes magicfoot {
+  from{
+  transform: translateY(-80%)
+  }
+}
+
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+    transform: scale(0.9);
+
+  }
+
+  50%{
+    transform: scale(1.2);
+
+
+  }
+  
+}
+
+
+@media (min-width: 1440px){
+
+  .blog{
+    display:grid;
+    grid-template-areas:
+    "A A A"
+    "B B C"
+    "D D D";
+        
+  }
+
+  .blog header{
+    grid-area: A;
+    grid-template-columns: auto;   
+    
+  }
+
+  .blog main{
+    grid-area: B;
+  }
+
+  .blog aside{
+    grid-area: C;
+  }
+
+  .blog footer{
+    grid-area:D;
+  }
+
+  
+  main, header .head{
+    max-width: initial;
+    padding: initial;
+    margin: initial;
+  }
+
+  main{
+    margin-inline: center;
+    max-width: 84rem;
+    
+  }
+
+  header .head{
+    max-width: 121.6rem;
+    margin-inline: auto;
+  }
+  
+  header form{
+    flex: 1;
+  }
+  header form input{
+    width: 100%;
+    
+  }
+ 
+
+  main img:first-child{
+    max-width: 80.3rem;
+    padding-top: 4.4rem;
+    padding-left: 11.2rem;
+
+  }
+
+  main .box{
+    max-width:80rem;
+  }
+
+  
+  main .section{
+    max-width:80rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+  }
+
+  
+  .button-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    flex-shrink: 0;
+    
+    
+  }
+
+  .thumbs{
+    
+    width: 4rem;
+    height: 4rem;
+    
+  }
+  
+  .box{
+    margin-left: 10.9rem;
+  }
+
+ 
+
+  aside{
+    margin-top: 4.4rem;
+    margin-right: 11rem;
+    max-width: 38.rem;
+    padding: 0;
+    
+  }
+
+  footer{
+    width: 100%;
+  }
+
+  
+}
+
+
+
+
+
+
